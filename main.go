@@ -29,8 +29,8 @@ func main() {
 
     Définir le tableau x <-- [10, 98, 54, 65, 52, 69, 96, 1]
 
-    Pour i = 0 à longueur(x) - 2 incrémenter i faire
-        Pour j = 0 à longueur(x) - i - 2 incrémenter j faire
+    Pour i = 0 à longueur(x) - 1 incrémenter i faire
+        Pour j = 0 à longueur(x) - i - 1 incrémenter j faire
             Si x[j] > x[j + 1] alors
                 Échanger x[j] et x[j + 1]
             Fin Si

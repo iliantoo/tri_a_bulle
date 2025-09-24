@@ -4,6 +4,7 @@ import (
     "fmt"
     "math/rand"
     "time"
+	"unsafe"
 )
 
 func tri(arr []int) {
@@ -28,6 +29,12 @@ func main() {
     fmt.Scan(&choix)
 
     x := make([]int, taille)
+
+	// Affichage des adresses mémoire
+    fmt.Printf("\nAdresse mémoire de la slice x : %p\n", unsafe.Pointer(&x))
+    if taille > 0 {
+        fmt.Printf("Adresse du premier élément : %p\n", unsafe.Pointer(&x[0]))
+    }
 
     if choix == "oui" || choix == "OUI" || choix == "o" || choix == "O"{
         for i := 0; i < taille; i++ {

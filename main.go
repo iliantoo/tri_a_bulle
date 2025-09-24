@@ -1,6 +1,9 @@
 /*package main
 
-import "fmt"
+import (
+    "fmt"
+    "time"
+)
 
 func main() {
 	start := time.Now()
@@ -21,7 +24,7 @@ func main() {
     fmt.Printf("Temps d'exécution : %s\n", elapsed)
 }
 
-Début du programme
+/*Début du programme
     Démarrer le chronomètre
 
     Définir le tableau x <-- [10, 98, 54, 65, 52, 69, 96, 1]
@@ -41,3 +44,4 @@ Début du programme
     Arrêter le chronomètre
     Afficher "Temps d'exécution : [durée]"
 Fin du programme
+*/

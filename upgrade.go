@@ -6,7 +6,7 @@ import (
     "time"
 )
 
-func bubbleSort(arr []int) {
+func tri(arr []int) {
     n := len(arr)
     for i := 0; i < n-1; i++ {
         for j := 0; j < n-i-1; j++ {
@@ -53,14 +53,72 @@ func main() {
     }
     fmt.Println()
 
-    bubbleSort(x)
+    tri(x)
 
     fmt.Println("Tableau trié :")
     for i := 0; i < taille; i++ {
         fmt.Printf("%d ", x[i])
     }
     fmt.Println()
-	
+
 	elapsed := time.Since(start)
     fmt.Printf("Temps d'exécution : %s\n", elapsed)
 }
+
+/*
+Début du programme
+    Démarrer le chronomètre
+
+    Afficher "Combien de nombres dans le tableau ?"
+    Lire taille
+
+    Afficher "Souhaitez-vous entrer les nombres vous-même ? (oui/non) :"
+    Lire choix
+
+    Créer un tableau x de taille "taille"
+
+    Si choix est "oui" alors
+        Pour i = 0 à taille - 1 incrémenter i, faire 
+            Afficher "Entrez le nombre i+1 :"
+            Lire x[i]
+        Fin Pour
+    Sinon
+        Initialiser le générateur de nombres aléatoires
+        Pour i = 0 à taille - 1 incrémenter i, faire
+           nombre aléatoire entre 0 et 99 --> x[i]  
+        Fin Pour
+
+        Afficher "Nombres générés automatiquement :"
+        Pour chaque élément dans x
+            Afficher l'élément
+        Fin Pour
+    Fin Si
+
+    Afficher "Tableau pas trié :"
+    Pour chaque élément dans x
+        Afficher l'élément
+    Fin Pour
+
+    Appeler la fonction tri(x)
+
+    Afficher "Tableau trié :"
+    Pour chaque élément dans x
+        Afficher l'élément
+    Fin Pour
+
+    Arrêter le chronomètre
+    Afficher "Temps d'exécution : [durée]"
+Fin du programme
+
+
+Fonction tri(tableau)
+    longueur du tableau --> n  
+    Pour i = 0 à n - 2 incrémenter i faire
+        Pour j = 0 à n - i - 2 incrémenter j faire
+            Si tableau[j] > tableau[j + 1] alors
+                Échanger tableau[j] et tableau[j + 1]
+            Fin Si
+        Fin Pour
+    Fin Pour
+Fin Fonction
+*/

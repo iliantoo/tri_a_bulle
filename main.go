@@ -20,3 +20,24 @@ func main() {
 	elapsed := time.Since(start)
     fmt.Printf("Temps d'exécution : %s\n", elapsed)
 }
+
+Début du programme
+    Démarrer le chronomètre
+
+    Définir le tableau x <-- [10, 98, 54, 65, 52, 69, 96, 1]
+
+    Pour i = 0 à longueur(x) - 2 incrémenter i faire
+        Pour j = 0 à longueur(x) - i - 2 incrémenter j faire
+            Si x[j] > x[j + 1] alors
+                Échanger x[j] et x[j + 1]
+            Fin Si
+        Fin Pour
+    Fin Pour
+
+    Pour chaque élément dans x faire
+        Afficher "valeur tableau : [élément]"
+    Fin Pour
+
+    Arrêter le chronomètre
+    Afficher "Temps d'exécution : [durée]"
+Fin du programme
